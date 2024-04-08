@@ -3,14 +3,22 @@ import './App.css';
 import AddRecipe from './component/AddRecipe';
 import SearchRecipe from './component/SearchRecipe';
 import AllRecipe from './component/AllRecipe';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div >
-      <AddRecipe/>
-      <SearchRecipe/>
-      <AllRecipe/>
-    </div>
+    <BrowserRouter>
+   <Routes>
+    <Route path='/' element={<AllRecipe/>} />
+    <Route path='/Add' element={<AddRecipe/>} />
+    <Route path='/Search' element={<SearchRecipe/>} />
+   </Routes>
+
+
+
+
+
+ </BrowserRouter>
   );
 }
 
